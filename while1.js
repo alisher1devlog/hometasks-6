@@ -3,13 +3,14 @@
 input: 38527
 output: 8 */
 
-let num = 385927;
+let num = 38527;
 let max = num%10;
 
-while(num){
+while(num>0){
     let oxirgi = num % 10;
-    if(oxirgi>=max){
+    if(oxirgi>max){
         max = oxirgi;
+        if (max === 9) break;
     }
     num = Math.floor(num/10);
 }
